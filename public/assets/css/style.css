@@ -23,6 +23,7 @@ body{
     :focus-visible {
         outline: none;
     }
+    margin: 0;
 }
 
 input, textarea{
