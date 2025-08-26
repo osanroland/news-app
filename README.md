@@ -13,10 +13,10 @@ cd News
 # Build and start containers
 docker compose up --build -d
 
-# Install PHP dependencies
+# Install dependencies (twig)
 docker compose exec web composer install --no-dev --optimize-autoloader
 
-# Setup database (create tables + sample data)
+# Setup database (create tables + seed)
 docker compose exec web php bootstrap.php
 ```
 
