@@ -1,0 +1,28 @@
+<li class="news-item">
+    <div class="news-item-content">
+        <div id="title-{{ news.id }}" class="news-title">{{ news.title }}</div>
+        {% if news.description %}
+            <div id="desc-{{ news.id }}" class="news-desc">{{ news.description }}</div>
+        {% endif %}
+    </div>
+
+    <div class="news-item-actions">
+        <button class="icon-btn btn-edit"
+                data-id="{{ news.id }}"
+                title="Edit">
+            <img height="15" width="15"
+                 src="/assets/images/pencil.svg"
+                 alt="edit icon"
+                 class="action-icon">
+        </button>
+
+        <form method="post" action="/admin/news/{{ news.id }}/delete">
+            <button class="icon-btn" title="Delete" aria-label="Delete">
+                <img height="15" width="15"
+                     src="/assets/images/close.svg"
+                     alt="close icon"
+                     class="action-icon">
+            </button>
+        </form>
+    </div>
+</li>

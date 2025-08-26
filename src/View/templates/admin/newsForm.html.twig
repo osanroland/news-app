@@ -1,0 +1,24 @@
+<div class="form-wrapper">
+    <div class="title-wrapper">
+        <h2 class="form-title">Create News</h2>
+        <button type="button" id="form-cancel" class="icon-btn" style="display:none">
+            <img height="15" width="15" src="/assets/images/close.svg" alt="" class="action-icon">
+        </button>
+    </div>
+
+    <form id="news-form" method="post" action="/admin/news" autocomplete="off">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+
+        <div class="form-group">
+            <input placeholder="Title" type="text" id="title" name="title" required maxlength="150">
+        </div>
+
+        <div class="form-group">
+            <textarea placeholder="Description" id="description" name="description" maxlength="200"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" id="form-submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</div>

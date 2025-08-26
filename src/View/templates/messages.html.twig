@@ -1,0 +1,11 @@
+{% if error is defined and error %}
+    <div class="message-box error-box">
+        {{ error }}
+    </div>
+{% endif %}
+
+{% if success is defined and success %}
+    <div class="message-box success-box">
+        {{ success }}
+    </div>
+{% endif %}

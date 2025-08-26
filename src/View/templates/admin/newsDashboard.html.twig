@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News Dashboard{% endblock %}
+
+{% block content %}
+    <section class="container">
+        {% if allNews %}
+            {% include 'admin/newsList.html.twig' with { allNews: allNews } %}
+        {% endif %}
+
+        {% include 'admin/newsForm.html.twig' %}
+
+        <form method="get" action="/logout" class="logout-form">
+            <button class="btn btn-primary" type="submit">Logout</button>
+        </form>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="/assets/js/news.js"></script>
+{% endblock %}

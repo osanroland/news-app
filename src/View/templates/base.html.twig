@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}News App{% endblock %}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block styles %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <img class="logo" src="/assets/images/logo.svg" alt="logo">
+    </div>
+</header>
+
+<main>
+    {% include 'messages.html.twig' %}
+    {% block content %}{% endblock %}
+
+    {% block scripts %}{% endblock %}
+</main>
+</body>
+</html>

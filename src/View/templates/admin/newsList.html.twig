@@ -1,0 +1,8 @@
+<div class="news-list-wrapper">
+    <h2 class="section-title">All News</h2>
+    <ul class="news-list">
+        {% for news in allNews %}
+            {% include 'admin/newsItem.html.twig' with { news: news } %}
+        {% endfor %}
+    </ul>
+</div>
