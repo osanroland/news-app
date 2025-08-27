@@ -27,3 +27,7 @@ Open your browser and navigate to: **http://localhost:8080**
 **Login credentials:**
 - Username: `admin`
 - Password: `test`
+
+**Versions on my local:**
+- Docker version 28.2.2
+- docker-compose version 1.8.1
