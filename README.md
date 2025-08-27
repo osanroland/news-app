@@ -14,7 +14,7 @@ cd News
 docker compose up --build -d
 
 # Install dependencies (twig)
-docker compose exec web composer install --no-dev --optimize-autoloader
+docker compose exec web composer install
 
 # Setup database (create tables + seed)
 docker compose exec web php bootstrap.php
