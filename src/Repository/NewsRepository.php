@@ -2,8 +2,6 @@
 
 namespace App\Repository;
 
-namespace App\Repository;
-
 use PDO;
 use App\Model\News;
 class NewsRepository implements NewsRepositoryInterface
