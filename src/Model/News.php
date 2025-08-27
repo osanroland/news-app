@@ -47,7 +47,7 @@ final class News
         return new self(
             id: (int)$row['id'],
             title: (string)$row['title'],
-            description: $row['description'] !== null ? (string)$row['description'] : null,
+            description: $row['description'] !== null ? (string)$row['description'] : '',
             createdAt: isset($row['created_at']) ? new \DateTimeImmutable((string)$row['created_at']) : null,
             updatedAt: !empty($row['updated_at']) ? new \DateTimeImmutable((string)$row['updated_at']) : null,
         );
